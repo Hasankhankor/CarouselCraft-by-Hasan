@@ -71,14 +71,9 @@ const CarouselCraft = () => {
     <CardHeader className="text-center animate-fade-in">
       {/* Add content here if needed */}
     </CardHeader>
-    <CardContent className="flex overflow-x-auto flex-nowrap space-x-4 p-4">
+    <CardContent className="flex justify-center overflow-x-auto space-x-4 p-4">
       <CrousalShowCard imgSrc={templateone} pageLink='/TemplateOne' />
       <CrousalShowCard imgSrc={templateTwo} pageLink='/TemplateTwo' />
-
-
-<Image src="/template3.jpg" alt="Template 3" width={500} height={300} />
-<Image src="/template4.jpg" alt="Template 4" width={500} height={300} />
-
     </CardContent>
   </Card>
 </div>
