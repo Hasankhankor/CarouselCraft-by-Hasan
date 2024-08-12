@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from 'next/image';
 import templateone from '../../public/template1.jpg';
 import templateTwo from '../../public/template2.jpg';
 import templatethree from '../../public/template3.jpg';
@@ -74,8 +75,11 @@ const CarouselCraft = () => {
     <CardContent className="flex overflow-x-auto flex-nowrap space-x-4 p-4">
       <CrousalShowCard imgSrc={templateone} pageLink='/TemplateOne' />
       <CrousalShowCard imgSrc={templateTwo} pageLink='/TemplateTwo' />
-      <CrousalShowCard imgSrc={templatethree} pageLink='/TemplateOne' />
-      <CrousalShowCard imgSrc={templatefour} pageLink='/TemplateTwo' />
+
+
+<Image src="/template3.jpg" alt="Template 3" width={500} height={300} />
+<Image src="/template4.jpg" alt="Template 4" width={500} height={300} />
+
     </CardContent>
   </Card>
 </div>
