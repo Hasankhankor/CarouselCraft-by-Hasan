@@ -3,8 +3,7 @@ import { useState } from "react";
 import Image from 'next/image';
 import templateone from '../../public/template1.jpg';
 import templateTwo from '../../public/template2.jpg';
-import templatethree from '../../public/template3.jpg';
-import templatefour from '../../public/template4.jpg';
+
 import CrousalShowCard from "@/components/Crousals/CrousalShowCard";
 import {
   Card,
