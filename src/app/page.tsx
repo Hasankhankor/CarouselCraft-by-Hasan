@@ -74,8 +74,8 @@ const CarouselCraft = () => {
     <CardContent className="flex overflow-x-auto flex-nowrap space-x-4 p-4">
       <CrousalShowCard imgSrc={templateone} pageLink='/TemplateOne' />
       <CrousalShowCard imgSrc={templateTwo} pageLink='/TemplateTwo' />
-      <CrousalShowCard imgSrc={templatethree} pageLink='/TemplateOne' />
-      <CrousalShowCard imgSrc={templatefour} pageLink='/TemplateTwo' />
+      <CrousalShowCard imgSrc={templatethree} pageLink='/Templatethree' />
+      <CrousalShowCard imgSrc={templatefour} pageLink='/Templatefour' />
     </CardContent>
   </Card>
 </div>
