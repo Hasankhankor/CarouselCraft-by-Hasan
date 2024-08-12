@@ -6,6 +6,7 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import UserHandleCard from './UserHandleCard'
 import bannerImg from '../../../public/banner.png'
+
 function TemplateOne() {
 
     const {
@@ -17,73 +18,72 @@ function TemplateOne() {
         myImg,
         bg,
         count,
-        setHaveImg, banner, setShowForm
+        setHaveImg,
+        banner,
+        setShowForm
     } = useMyContext()
 
-const [templateData, setTemplateData] = useState ({
-    crousal: [
-        {
-          className: "",
-          Title: null,
-          subtitle: `Email is THE Best Way To Grow Business. 
-                  
-      • More sales 
-      • Better relationships 
-      • No algorithm problems 
-      
-      Here are the ll most popular email subject lines I sent during my recent 6 figure launches
-      (swipe for inspiration):`,
-          description: null,
-          banner: false,
-          bannerUrl: '',
-        },
-        {
-          className: "",
-    
-          Title: "TOPICAL AND CONTROVERSIAL",
-          subtitle: `IS ELON MUSK RUINING TWITTER?`,
-          description: `People love controversial current events. Keep an eye out for what's happening in the world - even better if it's in your niche - then use it as the hook to share your idea.`,
-          banner: true,
-          bannerUrl: banner,
-        },
-        {
-          className: "",
-    
-          Title: "USE AS A MENTOR",
-          subtitle: `THE DAY NAVAL RAVIKANT SLAPPED ME IN THE FACE`,
-          description: `Build authority by association by using names in your niche. BUT make sure you're the star of the show. People are here for your ideas.`,
-          banner: true,
-          bannerUrl: banner,
-        },
-        {
-          className: "",
-    
-          Title: "USE THE COMPETITION",
-          subtitle: `I GOT INTO A BAR FIGHT WITH JUSTIN WELSH AND DAN KOE`,
-          description: `You need a different point of view to stand out. But the secret isn't to attack other creators. It's to shed new light on an old concept.`,
-          banner: true,
-          bannerUrl: banner,
-        },
-        {
-          className: "",
-    
-          Title: "Thanks for reading!",
-          subtitle: `If you enjoyed this, come join 25,000+ creators reading my newsletter Digital Freedom and get weekly actionable advice to build your creator business`,
-          description: ` 💖 🔥 🔗`,
-          banner: false,
-          bannerUrl: null,
-        },
+    const [templateData, setTemplateData] = useState({
+      crousal: [
+          {
+            className: "",
+            Title: null,
+            subtitle: `Unlock the Power of Social Media for Your Business.
+
+        • Engage with a wider audience
+        • Build brand loyalty
+        • Drive traffic to your website
+
+        Here are the top 10 social media strategies to elevate your brand presence (swipe to discover):`,
+            description: null,
+            banner: false,
+            bannerUrl: "",  // Replace newUrl with an empty string or a default value
+          },
+          {
+            className: "",
+            Title: "MARKETING STRATEGIES",
+            subtitle: `5 Ways to Boost Your Email Open Rates`,
+            description: `Optimize your email campaigns by focusing on subject lines, personalization, and timing. Consistency is key to keeping your audience engaged and increasing open rates.`,
+            banner: true,
+            bannerUrl: "",  // Replace newUrl with an empty string or a default value
+          },
+          {
+            className: "",
+            Title: "LEARN FROM THE BEST",
+            subtitle: `What Jeff Bezos Taught Me About Business`,
+            description: `Insights from successful entrepreneurs can transform your approach to business. Learn how to apply their principles to achieve your goals.`,
+            banner: true,
+            bannerUrl: "",  // Replace newUrl with an empty string or a default value
+          },
+          {
+            className: "",
+            Title: "STAND OUT IN THE CROWD",
+            subtitle: `How to Differentiate Your Brand in a Saturated Market`,
+            description: `Focus on your unique selling points and leverage them to create a distinct brand identity that resonates with your target audience.`,
+            banner: true,
+            bannerUrl: "",  // Replace newUrl with an empty string or a default value
+          },
+          {
+            className: "",
+            Title: "Join Our Community!",
+            subtitle: `Subscribe to our newsletter and join over 50,000 marketers receiving exclusive tips and insights every week.`,
+            description: `🚀 🎯 📩`,
+            banner: false,
+            bannerUrl: "",  // Replace newUrl with an empty string or a default value
+          },
       ],
       arrow: true,
-      defaultBg: "#f2ffd5",
-      primaryColor: "#000",
-})
+      defaultBg: "#e0f7fa",
+      primaryColor: "#00796b",
+  });
 
   useEffect(() => {
     if(count >= 1){
       const len = count - 1
       const handleShow = {
-        title:templateData.crousal[len].Title !== null ? true : false, subtitle:templateData.crousal[len]?.subtitle !== null ? true : false, description: templateData.crousal[len]?.description !== null ? true : false
+        title:templateData.crousal[len].Title !== null ? true : false,
+        subtitle:templateData.crousal[len]?.subtitle !== null ? true : false,
+        description: templateData.crousal[len]?.description !== null ? true : false
       }
       setShowForm(handleShow)
     }
@@ -97,39 +97,37 @@ const [templateData, setTemplateData] = useState ({
    // Update the bannerUrl of the specified item
    updatedTemplateData.crousal[index] = {
      ...updatedTemplateData.crousal[index],
-     bannerUrl: newUrl ,
+     bannerUrl: newUrl,
    };
 
    // Update the state with the modified data
    setTemplateData(updatedTemplateData);
   };
-// IT WILL RUN WHEN THE USER UPLOAD IMG FOR BANNER
+
+  // IT WILL RUN WHEN THE USER UPLOAD IMG FOR BANNER
   useEffect(() => {
     if(count !== null){
-
       const indx = count - 1;
       if (myImg !== templateData.crousal[indx]?.bannerUrl) {
         updateBannerUrl(indx, myImg);
+      }
     }
-      } 
-
   }, [myImg]);
 
-const onCrousalLoad = () => {
+  const onCrousalLoad = () => {
     setCrouLength(templateData.crousal.length)
     setBgColor(templateData.defaultBg);
     setPrimaryColor(templateData.primaryColor);
-}
+  }
 
-// OPENING USE-EFFECT 
-useEffect(() => {
-  setHaveImg(false)
+  // OPENING USE-EFFECT
+  useEffect(() => {
+    setHaveImg(false)
     onCrousalLoad()
-},[])
+  },[])
 
-// CUSTOM INDX 
-let indxCount = 0
-
+  // CUSTOM INDX
+  let indxCount = 0
 
   return (
     <>
@@ -140,7 +138,7 @@ let indxCount = 0
             <div
             key={indx}
               id={`slide${indxCount}`}
-              className="h-[500px] p-4  block  min-w-[400px] "
+              className="h-[800px] p-4  block  min-w-[400px] "
               style={
                 bg.length > 1
                   ? {
@@ -218,17 +216,12 @@ let indxCount = 0
                   </div>
                 </div>
 
-                <div
-                  className={`absolute bottom-0 right-0 p-2  z-30 text-white`}
-                  style={{ backgroundColor: primaryColor }}
-                >
-                  <ArrowRight className="h-5 w-5" />
-                </div>
+
               </div>
             </div>
         )
     })}
-     
+
     </>
   )
 }

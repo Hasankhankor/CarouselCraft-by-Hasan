@@ -19,32 +19,33 @@ function TemplateTwo() {
   const [templateData, setTemplateData] = useState({
     crousals: [
       {
-        Title: "CONTENT PLAN STRATEGY",
+        Title: "SOCIAL MEDIA CONTENT PLAN",
         Description: null,
         firstpage: true,
       },
       {
-        Title: "PASTE YOUR ARTICLE",
-        Description: `Read an interesting article that you want to share with your LinkedIn audience?
+        Title: "SHARE YOUR STORY",
+        Description: `Have an inspiring story or experience to share with your followers?
 
-        We've got you covered. Simply copy the link and paste the link to “Article to LinkedIn post” template inside Supergrow.`,
+        Use our platform to craft engaging content that resonates with your audience and encourages interaction.`,
       },
       {
-        Title: "SELECT THE FORMAT",
-        Description: `Once you paste the link, select your preferred format.
-        
-        You can select from 10+ formats available at your fingertips to help you create visually appealing LinkedIn posts.`,
+        Title: "CHOOSE YOUR LAYOUT",
+        Description: `After drafting your story, pick a layout that best suits your message.
+
+        Select from a variety of customizable templates designed to make your posts stand out.`,
       },
       {
-        Title: "TRY IT OUT & LET US KNOW YOUR FEEDBACK",
+        Title: "EXPERIENCE & GIVE US YOUR FEEDBACK",
         Description: null,
-        lastpage:true
+        lastpage: true,
       },
     ],
-    bgColor:"#ef4444",
-    primaryColor:"#272525"  ,
-    haveBanners:false
+    bgColor: "#42a5f5",  // Updated background color
+    primaryColor: "#0d47a1",  // Updated primary color
+    haveBanners: false
   });
+
 
 
   useEffect(() => {
@@ -62,14 +63,14 @@ useEffect(() => {
 },[])
 
 const testing = primaryColor || templateData.primaryColor
-// CUSTOM INDX 
+// CUSTOM INDX
 let indxCount = 0
   return (
     <>
     {templateData.crousals.map((val, indx)=> {
-        
+
         indxCount = indxCount + 1;
-        
+
         return(
       <div key={indx} id={`slide${indxCount}`} className="h-fit min-w-[400px] relative flex flex-row overflow-hidden justify-between items-center " style={
         bg.length > 1
@@ -80,7 +81,7 @@ let indxCount = 0
           }
         : { backgroundColor: bgColor || templateData.bgColor , color: testing }
       }>
-        <div className="h-[500px] py-5 flex flex-col  w-full ">
+        <div className="h-[800px] py-5 flex flex-col  w-full ">
           {/* HEAEd  */}
           <div className={`flex items-center gap-3  py-4 ${val?.firstpage || val?.lastpage ? "pl-5": " pr-5 flex-row-reverse"}`}>
             <span className="flex-shrink-0 font-medium">{val?.firstpage || val?.lastpage ? crousalHandle.username : `0${count}`}</span>
@@ -95,7 +96,7 @@ let indxCount = 0
               <span  id={`title${indxCount}`} className="whitespace-pre-wrap">{val.Title}</span>
             </p>
             {/* DESCRIPTION  */}
-            <p 
+            <p
               className={`mt-1 text-sm font-normal leading-normal z-50 ${val.Description !== null ? "block" : "hidden"} ${karla.className}`}
               style={{ color:  testing }}
             >
@@ -142,7 +143,7 @@ let indxCount = 0
       </div>
            )
         })}
-        
+
     </>
   );
 }

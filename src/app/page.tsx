@@ -2,6 +2,8 @@
 import { useState } from "react";
 import templateone from '../../public/template1.jpg';
 import templateTwo from '../../public/template2.jpg';
+import templatethree from '../../public/template3.jpg';
+import templatefour from '../../public/template4.jpg';
 import CrousalShowCard from "@/components/Crousals/CrousalShowCard";
 import {
   Card,
@@ -14,24 +16,22 @@ const CarouselCraft = () => {
     const [state, setState] = useState(false);
 
     const Brand = () => (
-      <div className="flex items-center justify-between py-5 md:block">
-      <a href="javascript:void(0)" className="flex items-center">
-          <img
-              src="https://ik.imagekit.io/os33grffu/_b88d42a3-dac4-4886-a46a-55c34ee7894c-removebg-preview.png?updatedAt=1723400311093"
-              width={120}
-              height={50}
-              alt="CarouselCraft by Hasan logo"
-              className="mr-3"
-          />
-      <div className="flex items-center justify-center">
-      <span className="text-3xl font-bold text-sky-500">CarouselCraft by Hasan</span>
-    </div>
-
+      <div className="align-items: start justify-between py-2 md:block w-full pl-0">
+      <a href="javascript:void(0)" className="align-items: flex-start">
+        <img
+          src="https://ik.imagekit.io/os33grffu/_b88d42a3-dac4-4886-a46a-55c34ee7894c-removebg-preview.png?updatedAt=1723400311093"
+          width={120}
+          height={50}
+          alt="CarouselCraft by Hasan logo"
+          className="mr-3"
+        />
+       <div className="flex items-center justify-center">
+  <span className="text-3xl font-bold text-sky-500 glow-text">CarouselCraft by Hasan</span>
+</div>
 
       </a>
+    </div>
 
-
-  </div>
 
     );
 
@@ -66,17 +66,23 @@ const CarouselCraft = () => {
                         <h2 className="text-4xl text-sky-500 font-extrabold mx-auto md:text-5xl">
                         Spin Your Content to Life
                         </h2>
-                        <div className="w-full max-w-4xl mx-auto">
-  <Card className="transition-transform transform hover:scale-105 duration-300 ease-in-out bg-transparent shadow-none border-none">
+                        <div className="w-full max-w-4xl mx-auto p-4">
+  <Card className="w-full max-w-[100%] h-auto transition-transform transform hover:scale-105 duration-300 ease-in-out bg-transparent shadow-none border-none mx-auto">
     <CardHeader className="text-center animate-fade-in">
-
+      {/* Add content here if needed */}
     </CardHeader>
-    <CardContent className="flex justify-center gap-6 p-4">
+    <CardContent className="flex overflow-x-auto flex-nowrap space-x-4 p-4">
       <CrousalShowCard imgSrc={templateone} pageLink='/TemplateOne' />
       <CrousalShowCard imgSrc={templateTwo} pageLink='/TemplateTwo' />
+      <CrousalShowCard imgSrc={templatethree} pageLink='/TemplateOne' />
+      <CrousalShowCard imgSrc={templatefour} pageLink='/TemplateTwo' />
     </CardContent>
   </Card>
 </div>
+
+
+
+
 
 
                         <p className="max-w-2xl mx-auto text-gray-400">
@@ -150,6 +156,12 @@ const CarouselCraft = () => {
                                 (based on 45 reviews)
                             </a>
                         </div>
+                        <a
+                                href="https://hasan-port.vercel.app/"
+                                className="text-sm text-gray-400 hover:text-gray-300"
+                            >
+                                (Xooxs)
+                            </a>
                     </div>
                 </div>
             </section>

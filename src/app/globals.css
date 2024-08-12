@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 html,body{
   height: 100%;
   background-color:#f9fafb;
@@ -31,7 +31,7 @@ html,body{
     --ring: 142.1 76.2% 36.3%;
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 20 14.3% 4.1%;
     --foreground: 0 0% 95%;
@@ -80,4 +80,7 @@ border:none;
 
 .Myslide1{
   font-size: 22px;
+}
+.glow-text {
+  text-shadow: 0 0 8px rgba(110, 120, 122, 0.8), 0 0 12px rgba(126, 184, 201, 0.6), 0 0 18px rgba(128, 133, 134, 0.4);
 }
