@@ -26,7 +26,7 @@ const CarouselCraft = () => {
           className="mr-3"
         />
        <div className="flex items-center justify-center">
-  <span className="text-3xl font-bold text-sky-500 glow-text">CarouselCraft by Hasan</span>
+  <span className="text-3xl font-bold text-sky-500 glow-text">CarouselCraft by Hassan</span>
 </div>
 
       </a>
