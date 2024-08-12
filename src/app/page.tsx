@@ -2,7 +2,8 @@
 import { useState } from "react";
 import templateone from '../../public/template1.jpg';
 import templateTwo from '../../public/template2.jpg';
-
+import templatethree from '../../public/template3.jpg';
+import templatefour from '../../public/template4.jpg';
 import CrousalShowCard from "@/components/Crousals/CrousalShowCard";
 import {
   Card,
@@ -73,7 +74,8 @@ const CarouselCraft = () => {
     <CardContent className="flex overflow-x-auto flex-nowrap space-x-4 p-4">
       <CrousalShowCard imgSrc={templateone} pageLink='/TemplateOne' />
       <CrousalShowCard imgSrc={templateTwo} pageLink='/TemplateTwo' />
-
+      <CrousalShowCard imgSrc={templatethree} pageLink='/TemplateOne' />
+      <CrousalShowCard imgSrc={templatefour} pageLink='/TemplateTwo' />
     </CardContent>
   </Card>
 </div>
