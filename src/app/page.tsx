@@ -64,7 +64,7 @@ const CarouselCraft = () => {
                 <div className="relative z-10 max-w-screen-xl mx-auto px-4 py-28 md:px-8">
                     <div className="space-y-5 max-w-4xl mx-auto text-center">
                         <h2 className="text-4xl text-sky-500 font-extrabold mx-auto md:text-5xl">
-                        Spin Your Content to Life With Our Tool!
+                        Spin Your Content to Life With Our Tool!!
                         </h2>
                         <div className="w-full max-w-4xl mx-auto p-4">
   <Card className="w-full max-w-[100%] h-auto transition-transform transform hover:scale-105 duration-300 ease-in-out bg-transparent shadow-none border-none mx-auto">
