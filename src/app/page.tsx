@@ -16,21 +16,21 @@ const CarouselCraft = () => {
     const [state, setState] = useState(false);
 
     const Brand = () => (
-      <div className="align-items: start justify-between py-2 md:block w-full pl-0">
-      <a href="javascript:void(0)" className="align-items: flex-start">
-        <img
-          src="https://ik.imagekit.io/os33grffu/_b88d42a3-dac4-4886-a46a-55c34ee7894c-removebg-preview.png?updatedAt=1723400311093"
-          width={120}
-          height={50}
-          alt="CarouselCraft by Hasan logo"
-          className="mr-3"
-        />
-       <div className="flex items-center justify-center">
-  <span className="text-3xl font-bold text-sky-500 glow-text">CarouselCraft by Hassan</span>
+        <div className="flex items-center justify-between py-1 w-full pl-0">
+  <img
+    src="https://ik.imagekit.io/os33grffu/_b88d42a3-dac4-4886-a46a-55c34ee7894c-removebg-preview.png?updatedAt=1723400311093"
+    width={80}
+    height={30}
+    alt="CarouselCraft by Hasan logo"
+    className="mr-6"
+  />
+  <span className="text-3xl font-bold text-orange-500 glow-text flex-grow text-center">CarouselCraft by Hassan</span>
 </div>
 
-      </a>
-    </div>
+
+
+
+
 
 
     );
@@ -63,7 +63,7 @@ const CarouselCraft = () => {
             <section className="relative flex-1 flex items-center justify-center">
                 <div className="relative z-10 max-w-screen-xl mx-auto px-4 py-28 md:px-8">
                     <div className="space-y-5 max-w-4xl mx-auto text-center">
-                        <h2 className="text-4xl text-sky-500 font-extrabold mx-auto md:text-5xl">
+                        <h2 className="text-4xl text-orange-400  font-extrabold mx-auto md:text-5xl">
                         Spin Your Content to Life With Our Tool!!
                         </h2>
                         <div className="w-full max-w-4xl mx-auto p-4">
@@ -75,9 +75,11 @@ const CarouselCraft = () => {
       <CrousalShowCard imgSrc={templateone} pageLink='/TemplateOne' />
       <CrousalShowCard imgSrc={templateTwo} pageLink='/TemplateTwo' />
     </CardContent>
+    <div className="border-t-4 border-orange-500 mt-5 py-3 text-center">
+      <span className="text-orange-500 font-semibold">Choose Template</span>
+    </div>
   </Card>
 </div>
-
 
 
 
@@ -95,7 +97,7 @@ const CarouselCraft = () => {
                                 placeholder="Enter your email"
                                 className="w-full px-3 py-2.5 text-gray-400 bg-gray-700 focus:bg-gray-900 duration-150 outline-none rounded-lg shadow sm:max-w-sm sm:w-auto"
                             />
-                            <button className="flex items-center justify-center gap-x-2 py-2.5 px-4 mt-3 w-full text-sm text-white font-medium bg-sky-500 hover:bg-sky-400 active:bg-sky-600 duration-150 rounded-lg sm:mt-0 sm:w-auto">
+                            <button className="flex items-center justify-center gap-x-2 py-2.5 px-4 mt-3 w-full text-sm text-white font-medium bg-orange-400 -200 hover:bg-orange-500 active:bg-sky-600 duration-150 rounded-lg sm:mt-0 sm:w-auto">
                                 Get started
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
